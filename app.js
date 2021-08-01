@@ -8,7 +8,7 @@ const helmet = require("helmet");
 const sauceRoutes = require('./routes/sauce');
 const userRoute = require('./routes/user');
 
-mongoose.connect('mongodb+srv://Shamin94:deboder94@cluster0.ryxut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://MyFirstDatabaseAdmin:9L8ve0gkkocU2VGh@cluster0.ryxut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true

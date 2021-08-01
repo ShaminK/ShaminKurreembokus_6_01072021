@@ -32,12 +32,14 @@ exports.login = (req, res, next) => {
                         userId: user._id,
                         token: jwt.sign(
                             { userId: user._id },
-                            'RANDOM_TOKEN_SECRET',
+                            's3N3082iKoC3Mls9SYec',
                             {expiresIn: '24h'}
                         )
                     });
                 })
                 .catch(error => res.status(500).json({error}))
         })
-        .catch(error => res.status(500).json({ error }));
+        .catch(error => {
+            res.status(500).json({ error : "Une erreur est survenue" })
+            console.error(error);   });
 };
